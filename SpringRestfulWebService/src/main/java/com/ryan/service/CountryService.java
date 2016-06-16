@@ -30,7 +30,7 @@ public class CountryService {
 		return listOfCountries;
 	}
 
-	public Country getCountry(int id) {		
+	public Country getCountry(int id) {
 		tempCountry = new Country(id);
 		if(listOfCountries.contains(tempCountry)) {
 			return listOfCountries.get(listOfCountries.indexOf(tempCountry));
