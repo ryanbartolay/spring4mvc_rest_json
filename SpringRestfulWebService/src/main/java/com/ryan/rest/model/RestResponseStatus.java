@@ -1,4 +1,4 @@
-package com.ryan.enumeration;
+package com.ryan.rest.model;
 
 public enum RestResponseStatus {	
 	SUCCESS("success"), ERROR("error"); 
