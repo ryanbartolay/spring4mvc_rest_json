@@ -1,9 +1,16 @@
 package com.ryan.model;
 
 public class Country {
-	int id;  
-	String countryName;   
-
+	private int id;  
+	private String countryName;   
+	
+	public Country() {
+	}
+	
+	public Country(int i) {		
+		this.id = i;  
+	}
+	
 	public Country(int i, String countryName) {  
 		super();  
 		this.id = i;  
@@ -20,5 +27,25 @@ public class Country {
 	}  
 	public void setCountryName(String countryName) {  
 		this.countryName = countryName;  
+	}
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		return result;
+	}
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Country other = (Country) obj;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 }
