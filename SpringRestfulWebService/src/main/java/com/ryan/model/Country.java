@@ -48,4 +48,9 @@ public class Country {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Country [id=" + id + ", countryName=" + countryName + "]";
+	}
 }

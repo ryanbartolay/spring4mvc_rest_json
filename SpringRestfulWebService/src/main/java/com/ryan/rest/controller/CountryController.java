@@ -13,7 +13,15 @@ import com.ryan.service.CountryService;
 
 @RestController
 public class CountryController {  
-	CountryService countryService = new CountryService();  
+	private CountryService countryService;
+	
+	public CountryService getCountryService() {
+		return countryService;
+	}
+
+	public void setCountryService(CountryService countryService) {
+		this.countryService = countryService;
+	}
 
 	@RequestMapping(value = "/countries", method = RequestMethod.GET, headers = "Accept=application/json")  
 	public List<Country> getCountries() {  		

@@ -7,15 +7,7 @@
 		http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
 
 	<mvc:annotation-driven />
-	<context:component-scan base-package="com.ryan.rest.controller" />
-	<context:component-scan base-package="com.ryan.rest.service" />
-	
-	<bean id="countryService" class="com.ryan.service.CountryService">
-		<property name="restResponse">
-			<ref bean="restResponse" />
-		</property>
-	</bean>
-	
-	<bean id="restResponse" class="com.ryan.rest.model.ErrorResponse" />	
+	<context:component-scan base-package="com.ryan.rest.controller" />	
 
+	<import resource="country-servlet.xml"/>
 </beans>

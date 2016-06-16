@@ -5,16 +5,17 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.ryan.model.Country;
 import com.ryan.rest.model.ErrorResponse;
 import com.ryan.rest.model.Response;
-
-import com.ryan.model.Country;
 
 @Service
 public class CountryService {
 
+	@Autowired
 	private ErrorResponse restResponse;
 	
 	private List<Country> listOfCountries = new ArrayList<>();
@@ -42,8 +43,7 @@ public class CountryService {
 		this.restResponse = restResponse;
 	}
 
-	public List<Country> getAllCountries() {
-		System.out.println(restResponse.getLabels().getString("s1"));
+	public List<Country> getAllCountries() {		
 		return listOfCountries;
 	}
 
